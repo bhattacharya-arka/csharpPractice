@@ -1,0 +1,15 @@
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/bin/Debug/net8.0/Arrays_Strings
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/bin/Debug/net8.0/Arrays_Strings.deps.json
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/bin/Debug/net8.0/Arrays_Strings.runtimeconfig.json
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/bin/Debug/net8.0/Arrays_Strings.dll
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/bin/Debug/net8.0/Arrays_Strings.pdb
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/Arrays_Strings.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/Arrays_Strings.AssemblyInfoInputs.cache
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/Arrays_Strings.AssemblyInfo.cs
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/Arrays_Strings.csproj.CoreCompileInputs.cache
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/Arrays_Strings.sourcelink.json
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/Arrays_Strings.dll
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/refint/Arrays_Strings.dll
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/Arrays_Strings.pdb
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/Arrays_Strings.genruntimeconfig.cache
+/Users/arkabhattacharya/Developer/csharp/Arrays_Strings/obj/Debug/net8.0/ref/Arrays_Strings.dll
