@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-learning", "dotnet-learning\dotnet-learning.csproj", "{599B71A2-B4B3-4680-B884-DC7B3F9FF408}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_Strings", "Arrays_Strings\Arrays_Strings.csproj", "{68F20B98-AD63-4C0B-AEDE-10B55402A9DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{599B71A2-B4B3-4680-B884-DC7B3F9FF408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{599B71A2-B4B3-4680-B884-DC7B3F9FF408}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{599B71A2-B4B3-4680-B884-DC7B3F9FF408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F20B98-AD63-4C0B-AEDE-10B55402A9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F20B98-AD63-4C0B-AEDE-10B55402A9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F20B98-AD63-4C0B-AEDE-10B55402A9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F20B98-AD63-4C0B-AEDE-10B55402A9DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
