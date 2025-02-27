@@ -12,3 +12,4 @@
 /Users/arkabhattacharya/Developer/csharp/dotnet-learning/obj/Debug/net8.0/dotnet-learning.pdb
 /Users/arkabhattacharya/Developer/csharp/dotnet-learning/obj/Debug/net8.0/dotnet-learning.genruntimeconfig.cache
 /Users/arkabhattacharya/Developer/csharp/dotnet-learning/obj/Debug/net8.0/ref/dotnet-learning.dll
+/Users/arkabhattacharya/Developer/csharp/dotnet-learning/obj/Debug/net8.0/dotnet-learning.sourcelink.json

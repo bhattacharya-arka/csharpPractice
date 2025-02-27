@@ -4,16 +4,13 @@ namespace dotnet_learning
 {
     internal class Program
     {
-        static int _firstNumber = 0, _secondNumber = 0;
-        static string? _inputString = "";
+        private static int _firstNumber = 0,_secondNumber = 0;
+        //static string? _inputString = "";
+        private static char _firstChar = ' ';
         public static void Main(String[] args)
         {
             InputAll();
-            bool marker = ReverseString();
-            if (marker)
-                Console.WriteLine("The string is a palindrome");
-            else
-                Console.WriteLine("The string is not a palindrome");
+            OddEvenInRange();
         }
 
         //the first method for the first problem statement
@@ -24,11 +21,13 @@ namespace dotnet_learning
         //shared function
         private static void InputAll()
         {
-            //Console.WriteLine("Enter the numbers :-");
-            //_firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the numbers :-");
+            _firstNumber = Convert.ToInt32(Console.ReadLine());
             //_secondNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the string :-");
-            _inputString = Console.ReadLine();
+            //Console.WriteLine("Enter the string :-");
+            //_inputString = Console.ReadLine();
+            //Console.WriteLine("Enter the character :-");
+            //_firstChar = Convert.ToChar(Console.ReadLine() ?? throw new InvalidOperationException());
         }
         //the second method for the second problem statement
         private static void AddNumbers()
@@ -68,7 +67,7 @@ namespace dotnet_learning
             Console.WriteLine("The sum of the digits is :- " + sum);
         }
 
-        private static bool ReverseString()
+        /*private static bool ReverseString()
         {
             String _reversedString = "";
             if (_inputString != null)
@@ -81,6 +80,99 @@ namespace dotnet_learning
             Console.WriteLine();
             return _reversedString == _inputString;
         }
-        
+        private static void CountVowels()
+        {
+            int count = 0;
+            if (_inputString != null)
+                foreach (char c in _inputString)
+                {
+                    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
+                        count++;
+                }
+            Console.WriteLine("The number of vowels in the string is :- " + count);
+        }*/
+        private static void Factorial()
+        {
+            int fact = 1;
+            for (int i = 1; i <= _firstNumber; i++)
+            {
+                fact *= i;
+            }
+            Console.WriteLine("The factorial of the number is :- " + fact);
+        }
+        private static void Fibonacci()
+        {
+            int a = 0, b = 1, c = 0;
+            Console.Write(a + " " + b + " ");
+            for (int i = 2; i < _firstNumber; i++)
+            {
+                c = a + b;
+                Console.Write(c + " ");
+                a = b;
+                b = c;
+            }
+        }
+
+        private static void Prime()
+        {
+            bool isPrime = _firstNumber > 1;
+            for (int i = 2; i <= (int)Math.Sqrt(_firstNumber); i++)
+            {
+                if (_firstNumber % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+            Console.WriteLine(isPrime ? "The number is prime" : "The number is not prime");
+        }
+
+        private static void GCD()
+        {
+            int gcd = 1;
+            for (int i = 1; i <= _firstNumber && i <= _secondNumber; i++)
+            {
+                if (_firstNumber % i == 0 && _secondNumber % i == 0)
+                    gcd = i;
+            }
+            Console.WriteLine("The GCD of the numbers is :- " + gcd);
+        }
+        private static void LCM()
+        {
+            int lcm = _firstNumber > _secondNumber ? _firstNumber : _secondNumber;
+            while (true)
+            {
+                if (lcm % _firstNumber == 0 && lcm % _secondNumber == 0)
+                {
+                    Console.WriteLine("The LCM of the numbers is :- " + lcm);
+                    break;
+                }
+                lcm++;
+            }
+        }
+        private static void CelsiusToFahrenheit()
+        {
+            int fahrenheit = (_firstNumber * 9 / 5) + 32;
+            Console.WriteLine("The temperature in Fahrenheit is :- " + fahrenheit);
+        }
+        private static void charToAscii()
+        {
+            Console.WriteLine("The ASCII value of the character is :- " + (int)_firstChar);
+        }
+        private static void OddEvenInRange()
+        {
+            Console.WriteLine("The even numbers in the range are :- ");
+            for (int i = 0; i <= _firstNumber; i++)
+            {
+                if (i % 2 == 0)
+                    Console.Write(i + " ");
+            }
+            Console.WriteLine("\nThe odd numbers in the range are :- ");
+            for (int i = 0; i <= _firstNumber; i++)
+            {
+                if (i % 2 != 0)
+                    Console.Write(i + " ");
+            }
+        }
     }
 }
