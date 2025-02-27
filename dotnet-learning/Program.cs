@@ -9,11 +9,7 @@ namespace dotnet_learning
         public static void Main(String[] args)
         {
             InputAll();
-            bool marker = ReverseString();
-            if (marker)
-                Console.WriteLine("The string is a palindrome");
-            else
-                Console.WriteLine("The string is not a palindrome");
+            CountVowels();
         }
 
         //the first method for the first problem statement
@@ -80,6 +76,17 @@ namespace dotnet_learning
 
             Console.WriteLine();
             return _reversedString == _inputString;
+        }
+        private static void CountVowels()
+        {
+            int count = 0;
+            if (_inputString != null)
+                foreach (char c in _inputString)
+                {
+                    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
+                        count++;
+                }
+            Console.WriteLine("The number of vowels in the string is :- " + count);
         }
         
     }
