@@ -13,18 +13,31 @@ class Program
     static void Main(string[] args)
     {
         InputArray();
-        DisplayArray();
-        RemoveDuplicates();
+        DisplayMatrix();
+        RotateMatrix();
+        //DisplayArray();
+        //RemoveDuplicates();
+        //MultiplicationTable();
     }
     private static void InputArray()
     {
         Console.WriteLine("Enter the size of the array: ");
         int size = Convert.ToInt32(Console.ReadLine());
-        _array = new int[size];
+        int lengths = Convert.ToInt32(Console.ReadLine());
+        //_array = new int[size];
+        _matrix = new int[size][];
         Console.WriteLine("Enter the elements of the array: ");
-        for (int i = 0; i < size; i++)
+        /*for (int i = 0; i < size; i++)
         {
             _array[i] = Convert.ToInt32(Console.ReadLine());
+        }*/
+        for (int i = 0; i < size; i++)
+        {
+            _matrix[i] = new int[lengths];
+            for (int j = 0; j < lengths; j++)
+            {
+                _matrix[i][j] = Convert.ToInt32(Console.ReadLine());
+            }
         }
     }
     private static void DisplayArray()
@@ -36,6 +49,22 @@ class Program
                 Console.Write(item + " ");
             }
         Console.WriteLine();
+    }
+    private static void DisplayMatrix()
+    {
+        Console.WriteLine("The elements of the matrix are: ");
+        if (_matrix != null)
+        {
+            for (int i = 0; i < _matrix.Length; i++)
+            {
+                for (int j = 0; j < _matrix[i].Length; j++)
+                {
+                    Console.Write(_matrix[i][j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
     }
     private static void LargestSmallest()
     {
@@ -203,6 +232,46 @@ class Program
                 Console.Write(item + " ");
             }
             Console.WriteLine();
+        }
+    }
+    private static void MultiplicationTable()
+    {
+        Console.WriteLine("Enter the number for which you want the multiplication table: ");
+        int number = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the range: ");
+        int range = Convert.ToInt32(Console.ReadLine());
+        for (int i = 1; i <= range; i++)
+        {
+            Console.WriteLine(number + " * " + i + " = " + (number * i));
+        }
+    }
+    private static void RotateMatrix()
+    {
+        if (_matrix != null)
+        {
+            int rows = _matrix.Length;
+            int columns = _matrix[0].Length;
+            int[][] rotatedMatrix = new int[columns][];
+            for (int i = 0; i < columns; i++)
+            {
+                rotatedMatrix[i] = new int[rows];
+            }
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    rotatedMatrix[j][rows - 1 - i] = _matrix[i][j];
+                }
+            }
+            Console.WriteLine("The elements of the rotated matrix are: ");
+            for (int i = 0; i < columns; i++)
+            {
+                for (int j = 0; j < rows; j++)
+                {
+                    Console.Write(rotatedMatrix[i][j] + " ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
