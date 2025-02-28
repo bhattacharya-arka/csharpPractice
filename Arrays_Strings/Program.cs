@@ -4,6 +4,8 @@ class Program
 {
     private static int[]? _array;
     private static int[][]? _matrix;
+    private static string? _str="";
+    private static string? _strng="";
 
     public Program(int[]? array, int[][]? matrix)
     {
@@ -12,12 +14,17 @@ class Program
     }
     static void Main(string[] args)
     {
-        InputArray();
-        DisplayMatrix();
-        RotateMatrix();
+        InputString();
+        isAnagram();
         //DisplayArray();
         //RemoveDuplicates();
         //MultiplicationTable();
+    }
+    private static void InputString()
+    {
+        Console.WriteLine("Enter the strings: ");
+        _str = Console.ReadLine();
+        _strng = Console.ReadLine();
     }
     private static void InputArray()
     {
@@ -271,6 +278,79 @@ class Program
                     Console.Write(rotatedMatrix[i][j] + " ");
                 }
                 Console.WriteLine();
+            }
+        }
+    }
+    private static void FirstNonRepeating()
+    {
+        if (_str != null)
+        {
+            Dictionary<char, int> dict = new Dictionary<char, int>();
+            for (int i = 0; i < _str.Length; i++)
+            {
+                if (dict.ContainsKey(_str[i]))
+                {
+                    dict[_str[i]]++;
+                }
+                else
+                {
+                    dict.Add(_str[i], 1);
+                }
+            }
+            foreach (var item in dict)
+            {
+                if (item.Value == 1)
+                {
+                    Console.WriteLine("The first non-repeating character is: " + item.Key);
+                    break;
+                }
+            }
+        }
+    }
+
+    private static void isAnagram()
+    {
+        if (_str != null && _strng != null)
+        {
+            if (_str.Length != _strng.Length)
+            {
+                Console.WriteLine("The strings are not anagrams.");
+            }
+            else
+            {
+                Dictionary<char, int> dict = new Dictionary<char, int>();
+                for (int i = 0; i < _str.Length; i++)
+                {
+                    if (dict.ContainsKey(_str[i]))
+                    {
+                        dict[_str[i]]++;
+                    }
+                    else
+                    {
+                        dict.Add(_str[i], 1);
+                    }
+                }
+                for (int i = 0; i < _strng.Length; i++)
+                {
+                    if (dict.ContainsKey(_strng[i]))
+                    {
+                        dict[_strng[i]]--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The strings are not anagrams.");
+                        return;
+                    }
+                }
+                foreach (var item in dict)
+                {
+                    if (item.Value != 0)
+                    {
+                        Console.WriteLine("The strings are not anagrams.");
+                        return;
+                    }
+                }
+                Console.WriteLine("The strings are anagrams.");
             }
         }
     }
